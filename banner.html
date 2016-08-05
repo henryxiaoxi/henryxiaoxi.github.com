@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Design小希的banner</title>
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+		<style>
+			body {
+				padding-top: 50px;
+				color: #5a5a5a;
+			}
+			/* 轮播广告 */
+			
+			.carousel {
+				height: 500px;
+				margin-bottom: 60px;
+			}
+			
+			.carousel .item {
+				height: 500px;
+				background-color: #000;
+			}
+			
+			.carousel .item img {
+				width: 100%;
+			}
+			
+			.carousel-caption {
+				z-index: 10;
+			}
+			
+			.carousel-caption p {
+				margin-bottom: 20px;
+				font-size: 20px;
+				line-height: 1.8;
+			}
+			/* 简介 */
+			
+			.summary {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+			
+			.summary .col-md-4 {
+				margin-bottom: 20px;
+				text-align: center;
+			}
+			/* 特性 */
+			
+			.feature-divider {
+				margin: 40px 0;
+			}
+			
+			.feature {
+				padding: 30px 0;
+			}
+			
+			.feature-heading {
+				font-size: 50px;
+				color: #2a6496;
+			}
+			
+			.feature-heading .text-muted {
+				font-size: 28px;
+			}
+			
+			.col-md-5 img {
+				margin: 55px auto;
+			}
+			
+			.jianli {
+				text-align: center;
+				font-family: "微软雅黑";
+			}
+			
+			.p1 {
+				font-size: 18px;
+				color: red;
+				font-family: "微软雅黑";
+			}
+			
+			.p2 {
+				font-family: "微软雅黑";
+				font-size: 22px;
+			}
+			
+			h1 {
+				text-align: center;
+				font-family: "微软雅黑";
+			}
+			
+			h2 {
+				font-family: "微软雅黑";
+			}
+			
+			footer {
+				background-color: #000000;
+			}
+			
+			footer p {
+				line-height: 28px;
+			}
+			
+			.col-md-12 {
+				padding-top: 15px;
+			}
+			
+			/* 响应式布局 */
+			
+			@media (max-width: 768px) {
+				.summary {
+					padding-right: 3px;
+					padding-left: 3px;
+				}
+				.carousel {
+					height: 300px;
+					margin-bottom: 30px;
+				}
+				.carousel .item {
+					height: 300px;
+				}
+				.carousel img {
+					min-height: 300px;
+				}
+				.carousel-caption p {
+					font-size: 16px;
+					line-height: 1.4;
+				}
+				.feature-heading {
+					font-size: 34px;
+				}
+				.feature-heading .text-muted {
+					font-size: 22px;
+				}
+			}
+			
+			@media (min-width: 992px) {
+				.feature-heading {
+					margin-top: 120px;
+				}
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<!-- 顶部导航 -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+			<div class="container">
+				<div class="navbar-header">
+					<!--缩小图标-->
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+					<a class="navbar-brand" href="https://henryxiaoxi.github.io/index">Design小希的个人网站</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<!--可以折叠的导航-->
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="https://henryxiaoxi.github.io/index">首页</a>
+						</li>
+						<li>
+							<a href="https://henryxiaoxi.github.io/jianli">个人简历</a>
+						</li>
+						<li class="dropdown">
+							<!--下拉菜单-->
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">作品分类<span class="caret"></span></a>
+							<!--dropdown-toggle下拉菜单标题， data-toggle="dropdown"切换成为dropdown-->
+							<ul class="dropdown-menu" role="menu">
+								<!--role充当角色-->
+								<li>
+									<a href="https://henryxiaoxi.github.io/paiban" data-tab="tab-chrome">排版设计</a>
+								</li>
+								<!--数据页面 -->
+								<li>
+									<a href="https://henryxiaoxi.github.io/banner" data-tab="tab-firefox">banner设计</a>
+								</li>
+								<li>
+									<a href="https://henryxiaoxi.github.io/web" data-tab="tab-safari">网页设计</a>
+								</li>
+								<li>
+									<a href="https://henryxiaoxi.github.io/game" data-tab="tab-opera">游戏合成设计</a>
+								</li>
+								<li>
+									<a href="https://henryxiaoxi.github.io/qietu" data-tab="tab-ie">H5/代码切图</a>
+								</li>
+								<li>
+									<a href="https://henryxiaoxi.github.io/jiaochen" data-tab="tab-ie">我的教程</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" data-toggle="modal" data-target="#about-modal">联系方式</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container jianli">
+			<h1>banner</h1>
+			<hr class="feature-divider">
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-thumbnail" src="images/banner01.jpg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-thumbnail" src="images/banner02.jpg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-thumbnail" src="images/banner03.jpg">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-thumbnail" src="images/banner04.jpg">
+				</div>
+			</div>
+			<hr class="feature-divider">
+		</div>
+
+		<!-- 关于 -->
+		<div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+						<h4 class="modal-title" id="modal-label">联系方式</h4>
+					</div>
+					<div class="modal-body">
+						<p>QQ:8173456</p>
+						<p>TEl:13788046740</p>
+						<p>网站主页:http://henryxiaoxi.github.io/</p>
+						<p>68联盟:http://my.68design.net/149478/</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">了解了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<footer>
+			<div class="container">
+				<p class="pull-right">
+					<a href="#top">回到顶部</a>
+				</p>
+				<p>作者：Design小希</p>
+			</div>
+		</footer>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>
